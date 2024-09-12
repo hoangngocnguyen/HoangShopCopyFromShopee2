@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/add-product.css">
+    <link rel="stylesheet" href="assets/css/grid.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.5.1/css/all.css" />
+</head>
+
+<body>
+    <div class="app">
+        <div class="grid wide">
+            <a href="index.html" class="return-btn btn">
+                <i class="fa-solid fa-house home-icon"></i>
+                Về trang chủ
+            </a>
+            <div class="row">
+                <div class="col l-6 m-12 c-12">
+                    <div class="add-product">
+                        <h1 class="add-product__heading">Thêm sản phẩm mới</h1>
+                        <form id="product-form">
+                            <div class="form-group">
+                                <label class="form-label" for="product-name">Tên sản
+                                    phẩm:</label>
+                                <input type="text" id="product-name" class="form-control">
+                                <div class="form-error" id="nameError">Vui lòng nhập tên sản phẩm</div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="product-image">Hình ảnh sản
+                                    phẩm:</label>
+                                <p>Chọn ảnh vuông (ví dụ 300 x 300)</p>
+                                <input type="file" id="product-image" accept="image/*" class="form-control">
+                                <div class="form-error" id="imageError">Vui lòng chọn hình ảnh sản phẩm</div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="product-price-old">Giá:</label>
+                                <input type="text" id="product-price" class="form-control">
+                                <div class="form-error" id="priceError">Vui lòng nhập giá</div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="product-brand">Thương
+                                    hiệu:</label>
+                                <input type="text" id="product-brand" class="form-control">
+                                <div class="form-error" id="brandError">Vui lòng nhập tên thương hiệu</div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="product-origin">Xuất xứ:</label>
+                                <input type="text" id="product-origin" class="form-control">
+                                <div class="form-error" id="originError">Vui lòng nhập xuất xứ sản phẩm</div>
+                            </div>
+                            <div class="form-group category">
+                                <span class="category-label">Danh mục </span>
+                                <i class="category-icon fa-solid fa-chevron-down"></i>
+                                <span class="category-name" id="categoryName"></span>
+                                <div class="category-list-group">
+                                    <ul id="js-category-list" class="category-list">
+                                        <!-- <li class="category-item">Điện thoại</li> -->
+                                    </ul>
+                                </div>
+
+                                <div class="form-error" id="categoryError">Vui lòng chọn danh mục sản phẩm</div>
+                            </div>
+
+                            <div class="product-form__submit">
+                                <button type="submit" id="form-submit"
+                                    class="product-form__submit-btn btn btn--primary">Add
+                                    Product</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col l-6 m-12 c-12">
+                    <div class="preview-product">
+                        <h1 class="preview__heading">Xem trước sản phẩm</h1>
+                        <div class="product-box">
+                            <div class="product-item">
+                                <div class="product-item__img">
+                                </div>
+                                <h4 class="product-item__name">Tên sản phẩm sẽ hiển thị ở đây</h4>
+
+                                <div class="product-item__price">
+                                    <span class="product-item__price-old">giá cũ</span>
+                                    <span class="product-item__price-current">giá mới</span>
+                                </div>
+
+                                <div class="product-item__action">
+                                    <div class="product-item__like product-item__like--liked">
+                                        <i class="fa-regular fa-heart product-item__like-icon-emty"></i>
+                                        <i class="fa-solid fa-heart product-item__like-icon-fill"></i>
+                                    </div>
+                                    <div class="product-item__rating">
+                                        <i class="product-item__star--gold fa-solid fa-star"></i>
+                                        <i class="product-item__star--gold fa-solid fa-star"></i>
+                                        <i class="product-item__star--gold fa-solid fa-star"></i>
+                                        <i class="product-item__star--gold fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+
+                                    <span class="product-item__sold">1911 đã bán</span>
+                                </div>
+
+                                <div class="product-item__origin">
+                                    <span class="product-item__brand">Thương hiệu</span>
+                                    <span class="product-item__origin-name">Xuất Xứ</span>
+                                </div>
+
+                                <div class="product-item__favorite">
+                                    <i class="fa-solid fa-check"></i>
+                                    <span>Yêu thích</span>
+                                </div>
+
+                                <div class="product-item__sale-off">
+                                    <span class="product-item__sale-off-percent">%</span>
+                                    <span class="product-item__sale-off-label">GIẢM</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="assets/javascript/addProduct.js"></script>
+</body>
+
+</html>
